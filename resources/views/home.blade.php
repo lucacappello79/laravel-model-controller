@@ -1,25 +1,3 @@
-{{-- @extends ('layouts/main')
-
-@section('content')
-<h1>
-    Elenco Film:
-</h1>
-
-    @foreach ($movies as $item)
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-        <h5 class="card-title">{{$item->title}}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">{{$item->original_title}}</h6>
-        <p class="card-text">{{$item->nationality}}</p>
-        <p class="card-text">{{$item->date}}</p>
-        <p class="card-text">{{$item->vote}}</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>      
-    @endforeach
-
-@endsection --}}
 
 @extends ('layouts/main')
 
