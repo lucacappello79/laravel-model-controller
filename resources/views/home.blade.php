@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends ('layouts/main')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
+<h1>
+    Elenco Film:
+</h1>
 
-    <title>Laravel</title>
+    @foreach ($movies as $item)
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">{{$item->title}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{$item->original_title}}</h6>
+        <p class="card-text">{{$item->nationality}}</p>
+        <p class="card-text">{{$item->date}}</p>
+        <p class="card-text">{{$item->vote}}</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>      
+    @endforeach
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
-    
-
-</body>
-
-</html>
+@endsection
